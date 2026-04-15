@@ -14,6 +14,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 const CONEKTA_PUBLIC_KEY = import.meta.env.VITE_CONEKTA_PUBLIC_KEY || 'key_xxxxxxxxxx'
+const CONEKTA_PRIVATE_KEY = import.meta.env.VITE_CONEKTA_PRIVATE_KEY || 'key_xxxxxxxxxx'
 
 // Load Conekta.js script dynamically
 export function loadConektaScript() {
@@ -56,11 +57,12 @@ export async function tokenizeCard({ number, name, expMonth, expYear, cvc }) {
 // Example Supabase Edge Function (supabase/functions/create-order/index.ts):
 //
 //   import Conekta from 'npm:conekta@latest'
-//   Conekta.api_key = Deno.env.get('CONEKTA_SECRET_KEY')
-//
+//   // Conekta.api_key = Deno.env.get('CONEKTA_PRIVATE_KEY')
+//   Conekta.api_key = CONEKTA_PRIVATE_KEY
+
 //   Deno.serve(async (req) => {
 //     const { token, amount, email, name, description, frequency } = await req.json()
-//
+
 //     // One-time charge
 //     if (frequency === 'once') {
 //       const order = await Conekta.Order.create({
@@ -71,7 +73,7 @@ export async function tokenizeCard({ number, name, expMonth, expYear, cvc }) {
 //       })
 //       return new Response(JSON.stringify({ id: order.id, status: order.payment_status }))
 //     }
-//
+
 //     // Monthly subscription
 //     const customer = await Conekta.Customer.create({
 //       name, email,

@@ -281,3 +281,18 @@ input, textarea, select { font-family: var(--font-body); font-size: 1rem; max-wi
 @media (max-width: 768px) {
   .section-pad { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
 }
+
+/* Perfil page responsive */
+@media (max-width: 700px) {
+  .perfil-layout {
+    grid-template-columns: 1fr !important;
+  }
+  .perfil-sidebar {
+    position: static !important;
+    padding: 1rem !important;
+  }
+  /* Hide desktop nav in sidebar, show avatar only */
+  .perfil-nav-desktop { display: none !important; }
+  /* Show horizontal tab bar in content area */
+  .perfil-tabs-mobile { display: flex !important; }
+}
