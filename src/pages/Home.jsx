@@ -630,8 +630,64 @@ export default function Home() {
           gridTemplateColumns: "1fr 1fr",
           gap: "4rem",
           alignItems: "start",
+          position: "relative",
+          overflow: "hidden",
         }}
       >
+        {/* Manchones decorativos */}
+        <svg
+          aria-hidden="true"
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            pointerEvents: "none",
+            opacity: 0.1,
+          }}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <ellipse
+            cx="85%"
+            cy="15%"
+            rx="28%"
+            ry="22%"
+            fill="#C4622D"
+            transform="rotate(-20, 510, 60)"
+          />
+          <ellipse
+            cx="12%"
+            cy="80%"
+            rx="22%"
+            ry="18%"
+            fill="#C8952A"
+            transform="rotate(15, 72, 480)"
+          />
+          <ellipse
+            cx="55%"
+            cy="50%"
+            rx="14%"
+            ry="10%"
+            fill="#5C7A5A"
+            transform="rotate(-35, 330, 300)"
+          />
+          <ellipse
+            cx="90%"
+            cy="90%"
+            rx="18%"
+            ry="14%"
+            fill="#C4622D"
+            transform="rotate(25, 540, 540)"
+          />
+          <ellipse
+            cx="5%"
+            cy="8%"
+            rx="16%"
+            ry="12%"
+            fill="#C8952A"
+            transform="rotate(-10, 30, 48)"
+          />
+        </svg>
         <div>
           <span
             style={{
