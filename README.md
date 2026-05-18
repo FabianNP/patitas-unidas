@@ -106,3 +106,4 @@ Desde el panel puedes:
 - **Noticias**: publicar noticias, anuncios y logros
 - **Gastos**: registrar y filtrar gastos para transparencia pública
 - **Donaciones**: ver historial de donaciones y su estatus
+- **Donaciones**: ver historial de donaciones y su estatus
